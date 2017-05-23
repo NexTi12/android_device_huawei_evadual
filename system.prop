@@ -92,7 +92,7 @@ ro.config.enable_rms=false
 gsm.fastdormancy.mode=0
 ro.config.hw_channel_info=0,0,0,0
 
-# RIL
+#RIL
 ro.multi.rild=true
 rild.libargs=-m modem0
 rild.libargs1=-m modem1
