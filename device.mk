@@ -64,14 +64,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/prebuilts/gps47531config_cl.xml:system/etc/gps47531config_cl.xml \
     $(LOCAL_PATH)/prebuilts/gps47531config_cl_beta.xml:system/etc/gps47531config_cl_beta.xml
 
-# Thermal engine
-PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/prebuilts/poweroff_thermald.xml:system/etc/poweroff_thermald.xml \
-    $(LOCAL_PATH)/prebuilts/temperaturemonitor_setting.xml:system/etc/temperaturemonitor_setting.xml \
-    $(LOCAL_PATH)/prebuilts/thermald.xml:system/etc/thermald.xml \
-    $(LOCAL_PATH)/prebuilts/thermald_performance.xml:system/etc/thermald_performance.xml \
-    $(LOCAL_PATH)/prebuilts/thermald_qcoff.xml:system/etc/thermald_qcoff.xml
-
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:system/etc/permissions/android.hardware.audio.low_latency.xml \
@@ -141,10 +133,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     fingerprint.kl \
 
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
-
 # KEYPAD
 PRODUCT_PACKAGES += \
     usbaudio.kl
@@ -165,6 +153,14 @@ PRODUCT_PACKAGES += \
     init.rc \
     ueventd.hi3650.rc
 
+# Thermal engine
+PRODUCT_COPY_FILES += \
+    $(LOCAL_PATH)/prebuilts/poweroff_thermald.xml:system/etc/poweroff_thermald.xml \
+    $(LOCAL_PATH)/prebuilts/temperaturemonitor_setting.xml:system/etc/temperaturemonitor_setting.xml \
+    $(LOCAL_PATH)/prebuilts/thermald.xml:system/etc/thermald.xml \
+    $(LOCAL_PATH)/prebuilts/thermald_performance.xml:system/etc/thermald_performance.xml \
+    $(LOCAL_PATH)/prebuilts/thermald_qcoff.xml:system/etc/thermald_qcoff.xml
+
 # LIBShim
 PRODUCT_PACKAGES += \
     libshim_gralloc
@@ -183,11 +179,12 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # HWC
 #PRODUCT_PACKAGES += \
-#    hwcomposer.hi3650
+    #hwcomposer.hi3650
+
 
 # Power HAL
-PRODUCT_PACKAGES += \
-    power.hi3650
+#PRODUCT_PACKAGES += \
+    #power.hi3650
 
 # LTE, CDMA, GSM/WCDMA
 PRODUCT_PROPERTY_OVERRIDES += \

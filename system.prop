@@ -81,7 +81,7 @@ ro.hardware.alter=Hisilicon Kirin 955
 
 # local
 ro.config.hw_lte_support=true
-ro.dual.sim.phone=false
+ro.dual.sim.phone=true
 persist.sys.dualcards=false
 ro.config.hw_sim2airplane=false
 ro.frp.pst=/dev/block/platform/hi_mci.0/by-name/frp
@@ -93,16 +93,21 @@ gsm.fastdormancy.mode=0
 ro.config.hw_channel_info=0,0,0,0
 
 # RIL
-ro.multi.rild=false
+ro.multi.rild=true
 rild.libargs=-m modem0
-ro.config.hw_dsda=false
+rild.libargs1=-m modem1
+ro.config.hw_dsda=true
+ro.multi.rild=true
+persist.dsds.enabled=true
 persist.radio.modem.cap=899BD
 ro.telephony.default_network=9
-rild.rild1_ready_to_start=false
-ro.config.dsds_mode=umts
+rild.rild1_ready_to_start=true
+persist.radio.multisim.config=dsda
+ro.config.dsds_mode=umts_gsm
 ro.config.reduce_sar_type1=001
 rild.libpath=/system/lib64/libbalong-ril.so
-persist.dsds.enabled=false
+rild.libpath1=/system/lib64/libbalong-ril.so
+persist.dsds.enabled=true
 
 ro.telephony.ril_class=HwHisiRIL
 audioril.lib=libhuawei-audio-ril.so
